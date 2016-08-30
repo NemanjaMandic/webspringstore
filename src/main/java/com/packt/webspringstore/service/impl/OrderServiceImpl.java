@@ -14,6 +14,11 @@ public class OrderServiceImpl implements OrderService{
     @Autowired
     private ProductRepository productRepository;
     
+    /**
+     *
+     * @param productId
+     * @param quantity
+     */
     @Override
     public void processOrder(String productId, long quantity) {
         Product productById = productRepository.getProductById(productId);
